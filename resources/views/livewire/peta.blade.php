@@ -21,7 +21,7 @@
     <script>
         document.addEventListener('livewire:load', () => {
             // maps leaflet
-            var map = L.map('map').setView([-7.983908, 112.621391], 13);
+            var map = L.map('map').setView([-7.867100, 112.523903], 13);
             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/">2022</a>',
                 maxZoom: 23,
