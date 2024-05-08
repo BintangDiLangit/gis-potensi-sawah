@@ -19,7 +19,7 @@ class Potensi extends Component
 
     public $desa_id, $pemiliklahan_id, $infotanah_id, $luas_lahan, $potensi_id;
     public $pemiliklahans, $infotanahs;
-    public $nama_desa, $nama_pemiliklahan, $jenis_tanah;
+    public $nama_desa, $nama_pemiliklahan, $jenis_tnm;
     protected $potensi, $desa, $pemiliklahan, $infotanah;
     public $batas_lahan = [];
 
@@ -30,7 +30,7 @@ class Potensi extends Component
         $this->potensi = ModelsPotensi::join('desas', 'desas.id', '=', 'potensis.desa_id')
             ->join('pemiliklahans', 'pemiliklahans.id', '=', 'potensis.pemiliklahan_id')
             ->join('infotanahs', 'infotanahs.id', '=', 'potensis.infotanah_id')
-            ->select('potensis.*', 'desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tanah')
+            ->select('potensis.*', 'desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tnm')
             ->where('pemiliklahan_id', 'like', '%' . $this->search . '%')
             ->orWhere('infotanah_id', 'like', '%' . $this->search . '%')
             ->orWhere('luas_lahan', 'like', '%' . $this->search . '%')
@@ -43,7 +43,7 @@ class Potensi extends Component
         $this->lahan = ModelsPotensi::join('desas', 'desas.id', '=', 'potensis.desa_id')
             ->join('pemiliklahans', 'pemiliklahans.id', '=', 'potensis.pemiliklahan_id')
             ->join('infotanahs', 'infotanahs.id', '=', 'potensis.infotanah_id')
-            ->select('potensis.*', 'desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tanah', 'infotanahs.ketinggian', 'infotanahs.kelembaban')
+            ->select('potensis.*', 'desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tnm', 'infotanahs.produksi', 'infotanahs.produktivitas')
             ->get();
         return view('livewire.potensi', [
             'potensi' => $this->potensi,

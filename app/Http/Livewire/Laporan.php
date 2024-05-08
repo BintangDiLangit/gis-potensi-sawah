@@ -17,7 +17,7 @@ class Laporan extends Component
         $this->laporans = ModelsPotensi::join('desas', 'desas.id', '=', 'potensis.desa_id')
             ->join('pemiliklahans', 'pemiliklahans.id', '=', 'potensis.pemiliklahan_id')
             ->join('infotanahs', 'infotanahs.id', '=', 'potensis.infotanah_id')
-            ->select('potensis.*', 'desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tanah', 'infotanahs.ketinggian', 'infotanahs.kelembaban')
+            ->select('potensis.*', 'desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tnm', 'infotanahs.produksi', 'infotanahs.produktivitas')
             ->get();
         $this->desas = ModelsDesa::where('kecamatans_id', $this->kecamatan)->get();
         $this->kecamatans = ModelsKecamatan::get();
@@ -32,8 +32,8 @@ class Laporan extends Component
                 ->join('pemiliklahans', 'pemiliklahans.id', '=', 'potensis.pemiliklahan_id')
                 ->join('infotanahs', 'infotanahs.id', '=', 'potensis.infotanah_id')
                 ->join('kecamatans', 'kecamatans.id', '=', 'desas.kecamatans_id')
-                ->select('potensis.*','desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tanah',
-                'infotanahs.ketinggian', 'infotanahs.kelembaban', 'kecamatans.nama_kecamatan')
+                ->select('potensis.*','desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tnm',
+                'infotanahs.produksi', 'infotanahs.produktivitas', 'kecamatans.nama_kecamatan')
                 // whereYear jika tahun TIDAK kosong
                 ->when($this->tahun, function($query){
                     return $query->whereYear('potensis.created_at', $this->tahun);

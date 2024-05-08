@@ -10,8 +10,8 @@ class Infotanah extends Model
     use HasFactory;
     protected $table = 'infotanahs';
     protected $fillable = [
-        'jenis_tanah',
-        'ketinggian',
-        'kelembaban',
+        'jenis_tnm',
+        'produksi',
+        'produktivitas',
     ];
 }

@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('infotanahs', function (Blueprint $table) {
             $table->id();
-            $table->string('jenis_tanah');
-            $table->string('ketinggian');
-            $table->string('kelembaban');
+            $table->string('jenis_tnm');
+            $table->string('produksi');
+            $table->string('produktivitas');
             $table->timestamps();
         });
     }

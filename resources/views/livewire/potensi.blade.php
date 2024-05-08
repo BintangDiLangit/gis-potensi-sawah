@@ -103,11 +103,11 @@
                                         </div>
                                         {{-- infotanah option --}}
                                         <div class="form-group mt-2">
-                                            <label for="infotanah_id" class="form-label mt-2">Jenis Tanah</label>
+                                            <label for="infotanah_id" class="form-label mt-2">Hasil Produksi</label>
                                             <select wire:model="infotanah_id" class="form-control">
-                                                <option value="">Pilih Jenis Tanah</option>
+                                                <option value="">Pilih Hasil Produksi</option>
                                                 @foreach ($infotanah as $item)
-                                                <option value="{{ $item->id }}">{{ $item->jenis_tanah }}</option>
+                                                <option value="{{ $item->id }}">{{ $item->jenis_tnm }}</option>
                                                 @endforeach
                                             </select>
                                             @error('infotanah_id') <span class="text-danger">{{ $message }}</span> @enderror
@@ -142,7 +142,7 @@
     <script>
         document.addEventListener('livewire:load', () => {
             // maps leaflet
-            var map = L.map('map').setView([-7.983908, 112.621391], 13);
+            var map = L.map('map').setView([-7.867100, 112.523903], 13);
             L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/">2022</a>',
                 maxZoom: 23,
@@ -200,9 +200,9 @@
                 //     '<b>ID</b> : ' + item['id'] + '<br>' +
                 //     "<b>Desa : </b>" + item['nama_desa'] + "<br>" +
                 //     "<b>Pemilik Lahan : </b>" + item['nama_pemiliklahan'] + "<br>" +
-                //     "<b>Jenis Tanah : </b>" + item['jenis_tanah'] + "<br>" +
-                //     "<b>Ketinggian : </b>" + item['ketinggian'] + " mdpl" + "<br>" +
-                //     "<b>Kelembaban : </b>" + item['kelembaban'] + "%<br>" +
+                //     "<b>Hasil Produksi : </b>" + item['jenis_tnm'] + "<br>" +
+                //     "<b>Ketinggian : </b>" + item['produksi'] + " ." + "<br>" +
+                //     "<b>Produktivitas : </b>" + item['produktivitas'] + "t/ha<br>" +
                 //     "<b>Luas Lahan : </b>" + item['luas_lahan'] + " m<sup>2</sup>" + "<br>"
                 //     );
                 });

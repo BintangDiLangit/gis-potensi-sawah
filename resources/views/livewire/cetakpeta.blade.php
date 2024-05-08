@@ -11,14 +11,14 @@
 
 </head>
 <body>
-    <!-- kop Dinas Pertanian Kabupaten Malang -->
+    <!-- kop Dinas Pertanian Kota Batu -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
-                    <img src="{{ asset('koltim.png') }}" alt="Kop Dinas Pertanian" width="60px">
+                    <img src="{{ asset('batulogo.png') }}" alt="Kop Dinas Pertanian" width="60px">
                     <h4 class="mt-2">DINAS PERTANIAN</h4>
-                    <h4 class="mt-0">KABUPATEN MALANG</h4>
+                    <h4 class="mt-0">KOTA BATU</h4>
                 </div>
             </div>
         </div>
@@ -44,9 +44,9 @@
                                 <th>No</th>
                                 <th>Nama Desa</th>
                                 <th>Nama Pemilik</th>
-                                <th>Jenis Tahan</th>
-                                <th>Ketinggian</th>
-                                <th>Kelembaban</th>
+                                <th>Jenis Pertanian</th>
+                                <th>Hasil Produksi</th>
+                                <th>Produktivitas</th>
                                 <th>Luas Sawah</th>
                             </tr>
                         </thead>
@@ -56,9 +56,9 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->nama_desa }}</td>
                                 <td>{{ $item->nama_pemiliklahan }}</td>
-                                <td>{{ $item->jenis_tanah }}</td>
-                                <td>{{ $item->ketinggian }} mpdl</td>
-                                <td>{{ $item->kelembaban }}%</td>
+                                <td>{{ $item->jenis_tnm }}</td>
+                                <td>{{ $item->produksi }} mpdl</td>
+                                <td>{{ $item->produktivitas }}%</td>
                                 <td>{{ $item->luas_lahan }} Ha</td>
                             </tr>
                             @endforeach

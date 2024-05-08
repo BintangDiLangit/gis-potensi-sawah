@@ -79,9 +79,9 @@
                     '<b>ID</b> : ' + item['id'] + '<br>' +
                     "<b>Desa : </b>" + item['nama_desa'] + "<br>" +
                     "<b>Pemilik petas : </b>" + item['nama_pemiliklahan'] + "<br>" +
-                    "<b>Jenis Tanah : </b>" + item['jenis_tanah'] + "<br>" +
-                    "<b>Ketinggian : </b>" + item['ketinggian'] + " mdpl" + "<br>" +
-                    "<b>Kelembaban : </b>" + item['kelembaban'] + "%<br>" +
+                    "<b>Hasil Produksi : </b>" + item['jenis_tnm'] + "<br>" +
+                    "<b>Ketinggian : </b>" + item['produksi'] + " ." + "<br>" +
+                    "<b>Produktivitas : </b>" + item['produktivitas'] + "t/ha<br>" +
                     "<b>Luas petas : </b>" + item['luas_lahan'] + " m<sup>2</sup>" + "<br>"
                     );
             });

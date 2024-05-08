@@ -25,8 +25,8 @@ class HalamanUser extends Component
         $this->petas = ModelsPotensi::join('desas', 'desas.id', '=', 'potensis.desa_id')
             ->join('pemiliklahans', 'pemiliklahans.id', '=', 'potensis.pemiliklahan_id')
             ->join('infotanahs', 'infotanahs.id', '=', 'potensis.infotanah_id')
-            ->select('potensis.*', 'desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tanah',
-            'infotanahs.ketinggian', 'infotanahs.kelembaban')
+            ->select('potensis.*', 'desas.nama_desa', 'pemiliklahans.nama_pemiliklahan', 'infotanahs.jenis_tnm',
+            'infotanahs.produksi', 'infotanahs.produktivitas')
             ->get();
         return view('livewire.halaman-user',[
             'infotanah' => $this->infotanah,

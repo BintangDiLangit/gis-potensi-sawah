@@ -44,7 +44,7 @@
                             <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('info_tanah') }}">Informasi Tanah</a>
+                            <a class="nav-link" href="{{ route('info_tanah') }}">Informasi Pertanian</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('desa') }}">Desa</a>
@@ -53,7 +53,7 @@
                             <a class="nav-link" href="{{ route('pemilik_lahan') }}">Pemilik Lahan</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="{{ route('potensi_sawah') }}">Potensi Sawah</a>
+                            <a class="nav-link" href="{{ route('potensi_sawah') }}">Potensi Lahan</a>
                         </li>
                         <li>
                             <a class="nav-link" href="{{ route('peta') }}">Peta</a>

@@ -20,18 +20,18 @@ class InfoSawah extends Component
     {
         $this->infotanahs = Infotanah::paginate($this->perPage);
     }
-    public $jenis_tanah, $ketinggian_tanah, $kelembaban_tanah, $infotanah_id;
+    public $jenis_tnm, $produksi, $produktivitas, $infotanah_id;
 
     public function resetInput()
     {
-        $this->jenis_tanah = '';
-        $this->ketinggian_tanah = '';
-        $this->kelembaban_tanah = '';
+        $this->jenis_tnm = '';
+        $this->produksi = '';
+        $this->produktivitas = '';
         $this->infotanah_id = '';
     }
     public function render()
     {
-        $this->infotanahs = Infotanah::where('jenis_tanah', 'like', '%' . $this->search . '%')->paginate($this->perPage);
+        $this->infotanahs = Infotanah::where('jenis_tnm', 'like', '%' . $this->search . '%')->paginate($this->perPage);
 
         return view('livewire.info-sawah',[
             'infotanahs' => $this->infotanahs,
@@ -40,15 +40,15 @@ class InfoSawah extends Component
 
     public function store(){
         $this->validate([
-            'jenis_tanah' => 'required',
-            'ketinggian_tanah' => 'required',
-            'kelembaban_tanah' => 'required',
+            'jenis_tnm' => 'required',
+            'produksi' => 'required',
+            'produktivitas' => 'required',
         ]);
 
         Infotanah::create([
-            'jenis_tanah' => $this->jenis_tanah,
-            'ketinggian' => $this->ketinggian_tanah,
-            'kelembaban' => $this->kelembaban_tanah,
+            'jenis_tnm' => $this->jenis_tnm,
+            'produksi' => $this->produksi,
+            'produktivitas' => $this->produktivitas,
         ]);
 
         $this->resetInput();
@@ -58,24 +58,24 @@ class InfoSawah extends Component
     public function tanahId($id){
         $tanah = Infotanah::find($id);
         $this->infotanah_id = $id;
-        $this->jenis_tanah = $tanah->jenis_tanah;
-        $this->ketinggian_tanah = $tanah->ketinggian;
-        $this->kelembaban_tanah = $tanah->kelembaban;
+        $this->jenis_tnm = $tanah->jenis_tnm;
+        $this->produksi = $tanah->produksi;
+        $this->produktivitas = $tanah->produktivitas;
     }
 
     public function update(){
         $this->validate([
-            'jenis_tanah' => 'required',
-            'ketinggian_tanah' => 'required',
-            'kelembaban_tanah' => 'required',
+            'jenis_tnm' => 'required',
+            'produksi' => 'required',
+            'produktivitas' => 'required',
         ]);
 
         if($this->infotanah_id){
             $tanah = Infotanah::find($this->infotanah_id);
             $tanah->update([
-                'jenis_tanah' => $this->jenis_tanah,
-                'ketinggian' => $this->ketinggian_tanah,
-                'kelembaban' => $this->kelembaban_tanah,
+                'jenis_tnm' => $this->jenis_tnm,
+                'produksi' => $this->produksi,
+                'produktivitas' => $this->produktivitas,
             ]);
             $this->resetInput();
             $this->emit('infotanahUpdate');

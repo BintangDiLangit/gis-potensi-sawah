@@ -6,10 +6,10 @@
         <div class="col-md-12">
             <div class="card shadow shadow-md">
                 <div class="card-header bg-dark text-white text-center ">
-                    <img class="img-fluid " src="{{ asset('koltim.png') }}" alt="logo" width="70px" height="70px">
+                    <img class="img-fluid " src="{{ asset('batulogo.png') }}" alt="logo" width="70px" height="70px">
                     {{-- sig potensi sawa koltim --}}
                     <h3 class=" mt-2">Sistem Informasi Geografis (SIG) Potensi Sawah</h3>
-                    <h1>KABUPATEN MALANG</h1>
+                    <h1>KOTA BATU</h1>
 
                 </div>
 
@@ -22,7 +22,7 @@
                             <div class="card">
                                 <div class="card-header bg-primary text-white text-center">
                                     <i class="fas fa-landmark fa-2x "></i>
-                                    <h5 class="card-title text-center">Jenis Tanah</h5>
+                                    <h5 class="card-title text-center">Hasil Produksi</h5>
                                 </div>
                                 <div class="card-body bg-dark text-white">
                                     <h1 class="text-center">{{ count($infotanah) }}</h1>
