@@ -87,7 +87,7 @@
                         <div class="form-group row">
                             <label for="produksi" class="col-md-4 col-form-label text-md-right">{{ __('Hasil Produksi') }}</label>
                             <div class="col-md-6 mb-2">
-                            <input id="jenis_tanah" type="text" class="form-control @error('produksi') is-invalid @enderror" name="produksi" wire:model="produksi" required autocomplete="produksi" autofocus>
+                            <input id="produksi" type="text" class="form-control @error('produksi') is-invalid @enderror" name="produksi" wire:model="produksi" required autocomplete="produksi" autofocus>
                                 @error('produksi')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -95,7 +95,7 @@
                                 @enderror
                             </div>
                             {{-- produksi --}}
-                            <label for="produksi" class="col-md-4 col-form-label text-md-right">{{ __('Jenis Tanaman') }}</label>
+                            <label for="jenis_tnm" class="col-md-4 col-form-label text-md-right">{{ __('Jenis Tanaman') }}</label>
                             <div class="col-md-6 mb-2">
                             <select id="jenis_tnm" class="form-control @error('jenis_tnm') is-invalid @enderror" name="jenis_tnm" wire:model="jenis_tnm" required autocomplete="jenis_tnm" autofocus>
             <option value="">Pilih Jenis Pertanian</option>
@@ -143,7 +143,7 @@
                 <div class="modal-body text-left">
                     <form wire:submit.prevent="update">
                         <div class="form-group row">
-                            <label for="jenis_tnm" class="col-md-4 col-form-label text-md-right">{{ __('Hasil Produksi') }}</label>
+                            <label for="jenis_tnm" class="col-md-4 col-form-label text-md-right">{{ __('Jenis Tanaman') }}</label>
                             <div class="col-md-6 mb-2">
                                 <input id="jenis_tnm" type="text" class="form-control @error('jenis_tnm') is-invalid @enderror" name="jenis_tnm" wire:model="jenis_tnm" required autocomplete="jenis_tnm" autofocus>
                                 @error('jenis_tnm')
@@ -153,7 +153,7 @@
                                 @enderror
                             </div>
                             {{-- produksi --}}
-                            <label for="produksi" class="col-md-4 col-form-label text-md-right">{{ __('Ketinggian Tanah') }}</label>
+                            <label for="produksi" class="col-md-4 col-form-label text-md-right">{{ __('Hasil Produksi') }}</label>
                             <div class="col-md-6 mb-2">
                                 <input id="produksi" type="text" class="form-control @error('produksi') is-invalid @enderror" name="produksi" wire:model="produksi" required autocomplete="produksi" autofocus>
                                 @error('produksi')

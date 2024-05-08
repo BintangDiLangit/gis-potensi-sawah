@@ -439,7 +439,7 @@
                 "<b>Desa : </b>" + item['nama_desa'] + "<br>" +
                 "<b>Pemilik petas : </b>" + item['nama_pemiliklahan'] + "<br>" +
                 "<b>Jenis Pertanian : </b>" + item['jenis_tnm'] + "<br>" +
-                "<b>Hasil Produksi : </b>" + item['produksi'] + " ." + "<br>" +
+                "<b>Hasil Produksi : </b>" + item['produksi'] + "" + "<br>" +
                 "<b>Produktivitas : </b>" + item['produktivitas'] + "t/ha<br>" +
                 "<b>Luas petas : </b>" + item['luas_lahan'] + " m<sup>2</sup>" + "<br>"
             );

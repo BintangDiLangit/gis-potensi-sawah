@@ -50,6 +50,7 @@
                                             <th>desa</th>
                                             <th>nama pemilik</th>
                                             <th>luas lahan</th>
+                                            <th>Hasil Produksi</th>
                                             <th>Batas lahan</th>
                                             <th>Action</th>
                                         </tr>
@@ -61,6 +62,7 @@
                                             <td>{{ $potensi->nama_desa }}</td>
                                             <td>{{ $potensi->nama_pemiliklahan }}</td>
                                             <td>{{ $potensi->luas_lahan }}</td>
+                                            <td>{{ $potensi->produksi }}</td>
                                             <td>{{ $potensi->batas_lahan }}</td>
                                             <td>
                                                 <button class="btn btn-primary btn-sm mb-1" wire:click="potensiId({{ $potensi->id }})">Edit</button>
@@ -107,7 +109,7 @@
                                             <select wire:model="infotanah_id" class="form-control">
                                                 <option value="">Pilih Hasil Produksi</option>
                                                 @foreach ($infotanah as $item)
-                                                <option value="{{ $item->id }}">{{ $item->jenis_tnm }}</option>
+                                                <option value="{{ $item->id }}">{{ $item->produksi }}</option>
                                                 @endforeach
                                             </select>
                                             @error('infotanah_id') <span class="text-danger">{{ $message }}</span> @enderror
