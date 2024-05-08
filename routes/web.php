@@ -21,4 +21,5 @@ Route::get('/potensi_sawah', LivewirePotensi::class)->name('potensi_sawah');
 Route::get('/peta', Peta::class)->name('peta');
 Route::get('/laporan', Laporan::class)->name('laporan');
 Route::get('/', HalamanUser::class)->name('user');
+Route::get('/filter-map/{jenis}', [HomeController::class,'filterMap'])->name('filterMap');
 

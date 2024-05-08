@@ -62,7 +62,7 @@
                                             <td>{{ $potensi->nama_desa }}</td>
                                             <td>{{ $potensi->nama_pemiliklahan }}</td>
                                             <td>{{ $potensi->luas_lahan }}</td>
-                                            <td>{{ $potensi->produksi }}</td>
+                                            <td>{{ $potensi->infoTanah->produksi }}</td>
                                             <td>{{ $potensi->batas_lahan }}</td>
                                             <td>
                                                 <button class="btn btn-primary btn-sm mb-1" wire:click="potensiId({{ $potensi->id }})">Edit</button>

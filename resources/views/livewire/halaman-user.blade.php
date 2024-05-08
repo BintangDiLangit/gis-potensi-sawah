@@ -348,20 +348,71 @@
         </div>
     </div>
 
-    <script>
-        // Fungsi untuk memfilter peta berdasarkan jenis tanaman yang dipilih
-        function filterMap(jenisTanaman) {
-            // Lakukan logika filter di sini, misalnya dengan menampilkan/menyembunyikan layer peta sesuai jenis tanaman yang dipilih
-            // Contoh:
-            if (jenisTanaman === 'semua') {
-                // Tampilkan semua layer peta
-            } else if (jenisTanaman === 'buah-buahan') {
-                // Hanya tampilkan layer peta untuk buah-buahan
-            } else if (jenisTanaman === 'sayuran') {
-                // Hanya tampilkan layer peta untuk sayuran
-            }
-        }
-    </script>
+<script>
+    function filterMap(jenisTanaman) {
+        $(document).ready(function() {
+            $.ajax({
+                url: "{{ route('filterMap', ':jenis') }}".replace(':jenis', jenisTanaman),
+                type: 'GET',
+                success: function(response) {
+                    // Update the petas data with the response data
+                    var petas = response.data;
+
+                    // Clear existing layers from the map
+                    map.eachLayer(function(layer) {
+                        if (layer instanceof L.Polygon || layer instanceof L.Marker) {
+                            map.removeLayer(layer);
+                        }
+                    });
+
+                    // Add new layers based on filtered data
+                    petas.forEach(function(item) {
+                        var cords = JSON.parse(item['batas_lahan']);
+                        console.log(cords);
+                        var coordinates = cords.geometry.coordinates[0];
+                        for (var i = 0; i < coordinates.length; i++) {
+                            coordinates[i].reverse();
+                        }
+                        var polygon = L.polygon(coordinates, {
+                            color: getRandomColor(),
+                            fillColor: getRandomColor(),
+                            fillOpacity: 0.8
+                        }).addTo(map);
+
+                        if (map.getZoom() < 15) {
+                            var marker = L.marker(coordinates[0], {
+                                icon: L.divIcon({
+                                    className: 'my-custom-pin',
+                                    iconAnchor: [0, 24],
+                                    labelAnchor: [-6, 0],
+                                    popupAnchor: [0, -36],
+                                    html: '<span class="fa-stack fa-2x">' +
+                                        '<i class="fa fa-circle fa-stack-2x" style="color:' + getRandomColor() + '"></i>' +
+                                        '<i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>' +
+                                        '</span>'
+                                })
+                            }).addTo(map);
+                        }
+
+                        polygon.bindPopup(
+                            '<b>ID</b> : ' + item['id'] + '<br>' +
+                            "<b>Desa : </b>" + item['nama_desa'] + "<br>" +
+                            "<b>Pemilik petas : </b>" + item['nama_pemiliklahan'] + "<br>" +
+                            "<b>Jenis Pertanian : </b>" + item['jenis_tnm'] + "<br>" +
+                            "<b>Hasil Produksi : </b>" + item['produksi'] + "" + "<br>" +
+                            "<b>Produktivitas : </b>" + item['produktivitas'] + "t/ha<br>" +
+                            "<b>Luas petas : </b>" + item['luas_lahan'] + " m<sup>2</sup>" + "<br>"
+                        );
+                    });
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    }
+</script>
+
 
     <!-- Pricing Plan End -->
     <div class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">

@@ -16,4 +16,8 @@ class Potensi extends Model
         'luas_lahan',
         'batas_lahan',
     ];
+
+    public function infoTanah() {
+        return $this->belongsTo(Infotanah::class,'infotanah_id','id');
+    }
 }

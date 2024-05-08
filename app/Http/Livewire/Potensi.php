@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Infotanah;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Potensi as ModelsPotensi;
