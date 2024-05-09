@@ -14,8 +14,6 @@ Sistem informasi geografis (GIS) Potensi Persawahan menggunakan Framework Larave
     cp .env-example .env
     npm run dev
     php artisan serve
- 
- ## Thanks
 
  ## Note
  - When ```cp .env-example .env```, then create the database and put to .env file in your project, ex. :
@@ -25,3 +23,5 @@ DB_DATABASE=potensisawah
 DB_USERNAME=root
 DB_PASSWORD=
 ```
+
+ ## Thanks
