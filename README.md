@@ -7,11 +7,21 @@ Sistem informasi geografis (GIS) Potensi Persawahan menggunakan Framework Larave
 - NPM / Node
 - Database
 # How to install
-    git clone https://github.com/anony7911/gis_potensi_sawah.git
+    git clone https://github.com/BintangDiLangit/gis-potensi-sawah.git
     cd gis_potensi_sawah
     composer update --no-scripts
     npm install
+    cp .env-example .env
     npm run dev
     php artisan serve
- 
+
+ ## Note
+ - When ```cp .env-example .env```, then create the database and put to .env file in your project, ex. :
+```
+DB_PORT=3306
+DB_DATABASE=potensisawah
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
  ## Thanks
