@@ -25,7 +25,7 @@
                                     <h5 class="card-title text-center">Hasil Produksi</h5>
                                 </div>
                                 <div class="card-body bg-dark text-white">
-                                    <h1 class="text-center">{{ count($produksi) }}</h1>
+                                    <h1 class="text-center">{{ count($infotanah) }}</h1>
                                 </div>
                             </div>
                         </div>
