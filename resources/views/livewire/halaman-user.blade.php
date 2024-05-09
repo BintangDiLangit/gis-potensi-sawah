@@ -368,6 +368,7 @@
                     // Add new layers based on filtered data
                     petas.forEach(function(item) {
                         var cords = JSON.parse(item['batas_lahan']);
+                        console.log(item);
                         console.log(cords);
                         var coordinates = cords.geometry.coordinates[0];
                         for (var i = 0; i < coordinates.length; i++) {
@@ -391,18 +392,17 @@
                                         '<i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>' +
                                         '</span>'
                                 })
-                            }).addTo(map);
+                            }).addTo(map).bindPopup(
+                                '<b>ID</b> : ' + item['id'] + '<br>' +
+                                "<b>Desa : </b>" + item['nama_desa'] + "<br>" +
+                                "<b>Pemilik petas : </b>" + item['nama_pemiliklahan'] + "<br>" +
+                                "<b>Jenis Pertanian : </b>" + item['jenis_tnm'] + "<br>" +
+                                "<b>Hasil Produksi : </b>" + item['produksi'] + "" + "<br>" +
+                                "<b>Produktivitas : </b>" + item['produktivitas'] + "t/ha<br>" +
+                                "<b>Luas petas : </b>" + item['luas_lahan'] + " m<sup>2</sup>" + "<br>"
+                            );
                         }
-
-                        polygon.bindPopup(
-                            '<b>ID</b> : ' + item['id'] + '<br>' +
-                            "<b>Desa : </b>" + item['nama_desa'] + "<br>" +
-                            "<b>Pemilik petas : </b>" + item['nama_pemiliklahan'] + "<br>" +
-                            "<b>Jenis Pertanian : </b>" + item['jenis_tnm'] + "<br>" +
-                            "<b>Hasil Produksi : </b>" + item['produksi'] + "" + "<br>" +
-                            "<b>Produktivitas : </b>" + item['produktivitas'] + "t/ha<br>" +
-                            "<b>Luas petas : </b>" + item['luas_lahan'] + " m<sup>2</sup>" + "<br>"
-                        );
+                        
                     });
                 },
                 error: function(xhr, status, error) {
@@ -482,18 +482,17 @@
                             '<i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>' +
                             '</span>'
                     })
-                }).addTo(map);
+                }).addTo(map).bindPopup(
+                                '<b>ID</b> : ' + item['id'] + '<br>' +
+                                "<b>Desa : </b>" + item['nama_desa'] + "<br>" +
+                                "<b>Pemilik petas : </b>" + item['nama_pemiliklahan'] + "<br>" +
+                                "<b>Jenis Pertanian : </b>" + item['jenis_tnm'] + "<br>" +
+                                "<b>Hasil Produksi : </b>" + item['produksi'] + "" + "<br>" +
+                                "<b>Produktivitas : </b>" + item['produktivitas'] + "t/ha<br>" +
+                                "<b>Luas petas : </b>" + item['luas_lahan'] + " m<sup>2</sup>" + "<br>"
+                );
             }
             // popup livewire click
-            polygon.bindPopup(
-                '<b>ID</b> : ' + item['id'] + '<br>' +
-                "<b>Desa : </b>" + item['nama_desa'] + "<br>" +
-                "<b>Pemilik petas : </b>" + item['nama_pemiliklahan'] + "<br>" +
-                "<b>Jenis Pertanian : </b>" + item['jenis_tnm'] + "<br>" +
-                "<b>Hasil Produksi : </b>" + item['produksi'] + "" + "<br>" +
-                "<b>Produktivitas : </b>" + item['produktivitas'] + "t/ha<br>" +
-                "<b>Luas petas : </b>" + item['luas_lahan'] + " m<sup>2</sup>" + "<br>"
-            );
         });
 
         map.pm.addControls({
