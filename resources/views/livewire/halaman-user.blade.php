@@ -179,33 +179,41 @@
                 <div class="testimonial-item">
                     <img class="position-relative rounded-circle bg-white shadow mx-auto" src="{{ url('/') }}/img/testimonial-1.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1;" alt="">
                     <div class="bg-light text-center p-4 pt-0">
-                        <h5 class="font-weight-medium mt-5">Kepala Pertanian</h5>
-                        <p class="text-muted font-italic">Kepala Dinas</p>
-                        <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor ipsum clita</p>
+                        <h5 class="font-weight-medium mt-5">Bidang Prasarana Pertanaian</h5>
+                        <p class="text-muted font-italic">Muhammad Zidan</p>
+                        <p class="m-0">Infrastruktur yang mendukung kegiatan pertanian untuk meningkatkan produktivitas, ketahanan pangan, dan kesejahteraan petani.</p>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <img class="position-relative rounded-circle bg-white shadow mx-auto" src="{{ url('/') }}/img/testimonial-2.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1;" alt="">
                     <div class="bg-light text-center p-4 pt-0">
-                        <h5 class="font-weight-medium mt-5">Kepala Pertanian</h5>
-                        <p class="text-muted font-italic">Kepala Dinas</p>
-                        <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor ipsum clita</p>
+                        <h5 class="font-weight-medium mt-5">Bidang Pertanian</h5>
+                        <p class="text-muted font-italic">Dika Afladhia</p>
+                        <p class="m-0">Pengelolaan sumber daya alam dan pemasaran produk, yang menjadi landasan utama dalam menyediakan pangan bagi populasi manusia.</p>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <img class="position-relative rounded-circle bg-white shadow mx-auto" src="{{ url('/') }}/img/testimonial-3.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1;" alt="">
                     <div class="bg-light text-center p-4 pt-0">
-                        <h5 class="font-weight-medium mt-5">Kepala Pertanian</h5>
-                        <p class="text-muted font-italic">Kepala Dinas</p>
-                        <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor ipsum clita</p>
+                        <h5 class="font-weight-medium mt-5">Bidang Peternakan dan Perikanan</h5>
+                        <p class="text-muted font-italic">Afifah Zein</p>
+                        <p class="m-0">Mengelola sumber daya hewan untuk memenuhi kebutuhan pangan dan industri.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <img class="position-relative rounded-circle bg-white shadow mx-auto" src="{{ url('/') }}/img/testimonial-3.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1;" alt="">
+                    <div class="bg-light text-center p-4 pt-0">
+                        <h5 class="font-weight-medium mt-5">Bidang Penyuluhan Pertanian</h5>
+                        <p class="text-muted font-italic">Putri Purnama</p>
+                        <p class="m-0">Memberikan informasi dan keterampilan kepada petani untuk meningkatkan efisiensi pertanian dan kesejahteraan masyarakat pedesaan.</p>
                     </div>
                 </div>
                 <div class="testimonial-item">
                     <img class="position-relative rounded-circle bg-white shadow mx-auto" src="{{ url('/') }}/img/testimonial-4.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1;" alt="">
                     <div class="bg-light text-center p-4 pt-0">
-                        <h5 class="font-weight-medium mt-5">Kepala Pertanian</h5>
-                        <p class="text-muted font-italic">Kepala Dinas</p>
-                        <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor ipsum clita</p>
+                        <h5 class="font-weight-medium mt-5">Bidang Ketahanan Pangan</h5>
+                        <p class="text-muted font-italic">Aulia Ilmi</p>
+                        <p class="m-0">Menjamin ketersediaan, akses, dan keberlanjutan pangan bagi semua dengan fokus pada produksi, distribusi, dan konsumsi pangan yang berkelanjutan.</p>
                     </div>
                 </div>
             </div>
