@@ -8,7 +8,7 @@ Sistem informasi geografis (GIS) Potensi Persawahan menggunakan Framework Larave
 - Database
 # How to install
     git clone https://github.com/BintangDiLangit/gis-potensi-sawah.git
-    cd gis_potensi_sawah
+    cd gis-potensi-sawah
     composer update --no-scripts
     npm install
     cp .env-example .env
